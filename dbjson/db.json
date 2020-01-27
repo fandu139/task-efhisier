@@ -1,8 +1,10 @@
 {
   "people" : [
-    "id" : 1,
-    "name" : "Fandu Pratama Lakuana",
-    "description" : "Uji Coba",
-    "image" : "url"
+    {
+      "id" : 1,
+      "name" : "Fandu Pratama Lakuana",
+      "description" : "Uji Coba",
+      "image" : "url"
+    }
   ]
 }
