@@ -34,10 +34,6 @@ class CustomAdapter : RecyclerView.Adapter<CustomViewHolder> {
         this.customListeners = customListeners
     }
 
-//    init {
-//        list = mutableListOf()
-//    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         customBinder = DataBindingUtil.inflate(
             LayoutInflater.from(parent.context),

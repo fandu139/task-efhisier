@@ -2,9 +2,17 @@ package com.fandu.home.view.holder
 
 import android.content.Context
 import android.view.View
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.fandu.home.databinding.CustomBinder
 import com.fandu.data.model.CustomModel
 import com.fandu.home.view.CustomListeners
+import android.R
+import android.graphics.Bitmap
+import android.util.Log
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
+import com.bumptech.glide.request.target.BitmapImageViewTarget
+
 
 // note fandu
 // send to databinding xml CustomBinder view item_simple
@@ -24,18 +32,10 @@ class CustomViewHolder : BaseViewHolder {
 
     override fun bindDataToViewHolder(item: CustomModel, position: Int) {
         setId(item.id?:0)
-        //customBinder.imageView.setBackgroundResource(item.icon?:0)
-        customBinder.imageView.setImageResource(item.icon?:0)
-        customBinder.buttonEdit.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(view : View) {
-                getListener().onUpdate(item,position)
-            }
-        })
-        customBinder.buttonDelete.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(view : View) {
-                getListener().onDelete(item,position)
-            }
-        })
+
+        Glide.with(itemView.context)
+            .load(item.url)
+            .into(customBinder.imageView)
     }
 
 }

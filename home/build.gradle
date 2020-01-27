@@ -55,4 +55,8 @@ dependencies {
     implementation "androidx.room:room-runtime:2.2.2" // android.arc.persistance.room:runtime
     kapt "androidx.room:room-compiler:2.2.2" //android.arc.persistensi.room:compiler
     testImplementation "androidx.room:room-testing:2.2.2" //android.arc.persistensi.room:testing
+
+    // Glide for image
+    implementation 'com.github.bumptech.glide:glide:4.4.0'
+    kapt 'com.github.bumptech.glide:compiler:4.4.0'
 }

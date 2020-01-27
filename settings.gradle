@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':home', ':data'
 rootProject.name='Task-eFishery'

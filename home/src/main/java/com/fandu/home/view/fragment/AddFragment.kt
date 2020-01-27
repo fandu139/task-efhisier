@@ -45,8 +45,8 @@ class AddFragment : Fragment() {
 
         binding.button.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view : View) {
-                viewModel.insertItem(CustomModel(binding.editText.text.toString()))
-                Toast.makeText(context,"onAdd(${binding.editText.text})", Toast.LENGTH_SHORT).show()
+                viewModel.insertItem(CustomModel(binding.editText.text.toString(), binding.editTextDescription.text.toString(), binding.editTextUrl.text.toString()))
+                Toast.makeText(context,"onAdd(${binding.editText.text}, ${binding.editTextDescription.text}, ${binding.editTextUrl.text})", Toast.LENGTH_SHORT).show()
                 hideSoftKeyboard()
                 activity!!.supportFragmentManager.popBackStack() // baru
             }

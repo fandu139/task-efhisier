@@ -47,6 +47,7 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.95"/>
         <!--endregion-->
+
         <!--region Horizontal Guidlines-->
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/constraint_guideline_top"
@@ -62,26 +63,16 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.95" />
         <!--endregion-->
+
         <!--endregion-->
         <TextView
             android:id="@+id/icon_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Icon"
+            android:text="Input Data :"
             app:layout_constraintTop_toTopOf="@id/constraint_guideline_top"
             app:layout_constraintStart_toStartOf="@id/constraint_guideline_start"
             app:layout_constraintEnd_toEndOf="@id/constraint_guideline_quarter_vertical" />
-
-        <ImageView
-            android:id="@+id/image_view"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:contentDescription="Image"
-            tools:srcCompat="@drawable/ic_launcher_foreground"
-            app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintTop_toBottomOf="@id/icon_text"
-            app:layout_constraintStart_toStartOf="@id/constraint_guideline_start"
-            app:layout_constraintEnd_toEndOf="@id/constraint_guideline_quarter_vertical"/>
 
         <Spinner
             android:id="@+id/spinner"
@@ -97,17 +88,41 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="1:0.10"
-            app:layout_constraintTop_toBottomOf="@id/image_view"
+            app:layout_constraintTop_toBottomOf="@id/icon_text"
             app:layout_constraintStart_toStartOf="@id/constraint_guideline_start"
             app:layout_constraintEnd_toEndOf="@id/constraint_guideline_end"/>
 
         <EditText
+            android:hint="input subtitle"
             android:id="@+id/edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/image_spacer"
             app:layout_constraintStart_toStartOf="@id/constraint_guideline_start"
             app:layout_constraintEnd_toEndOf="@id/constraint_guideline_end"
+            android:text="Bad Boys for Life"
+            />
+
+        <EditText
+            android:hint="input description"
+            android:id="@+id/edit_text_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/edit_text"
+            app:layout_constraintStart_toStartOf="@id/constraint_guideline_start"
+            app:layout_constraintEnd_toEndOf="@id/constraint_guideline_end"
+            android:text="The Bad Boys Mike Lowrey and Marcus Burnett are back together for one last ride in the highly anticipated Bad Boys for Life."
+            />
+
+        <EditText
+            android:hint="input url image"
+            android:id="@+id/edit_text_url"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_description"
+            app:layout_constraintStart_toStartOf="@id/constraint_guideline_start"
+            app:layout_constraintEnd_toEndOf="@id/constraint_guideline_end"
+            android:text="https://image.tmdb.org/t/p/w500/y95lQLnuNKdPAzw9F9Ab8kJ80c3.jpg"
             />
 
         <Button

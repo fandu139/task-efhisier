@@ -56,7 +56,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="200dp"
             app:layout_constraintTop_toTopOf="@id/constraint_guideline_marginTop"
             app:layout_constraintStart_toStartOf="@id/constraint_guideline_marginStart"
             app:layout_constraintEnd_toEndOf="@id/constraint_guideline_marginEnd"
@@ -125,58 +125,39 @@
                 <!--endregion-->
                 <!--endregion-->
 
-                <ImageView
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/image_view"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
+                    android:src="@drawable/ic_launcher_foreground"
                     android:contentDescription="Image"
-                    tools:srcCompat="@drawable/ic_launcher_foreground"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="@id/constraint_guideline_lead_quarter_vertical"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintBottom_toBottomOf="@id/constraint_guideline_center_vertical"/>
 
                 <TextView
                     android:id="@+id/text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@={customModel.name}"
+                    android:text="@={customModel.subtitle}"
                     tools:text="[Name]"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="@id/constraint_guideline_lead_quarter_vertical"
-                    app:layout_constraintEnd_toEndOf="@id/constraint_guideline_trail_quarter_vertical"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button_edit"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:text="Edit"
-                    android:textAllCaps="false"
-                    android:maxLines="1"
-                    app:autoSizeTextType="uniform"
-                    app:autoSizeMinTextSize="@dimen/auto_size_min_text_size"
-                    app:autoSizeMaxTextSize="@dimen/auto_size_max_text_size"
-                    app:autoSizeStepGranularity="@dimen/auto_size_step_granularity"
                     app:layout_constraintTop_toTopOf="@id/constraint_guideline_top"
-                    app:layout_constraintStart_toStartOf="@id/constraint_guideline_trail_quarter_vertical"
+                    app:layout_constraintStart_toStartOf="@id/constraint_guideline_lead_quarter_vertical"
                     app:layout_constraintEnd_toEndOf="@id/constraint_guideline_end"
-                    app:layout_constraintBottom_toBottomOf="@id/constraint_guideline_center_vertical"/>
+                    app:layout_constraintBottom_toBottomOf="@id/constraint_guideline_center_vertical"
+                    />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button_delete"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:text="Delete"
-                    android:textAllCaps="false"
-                    android:maxLines="1"
-                    app:autoSizeTextType="uniform"
-                    app:autoSizeMinTextSize="@dimen/auto_size_min_text_size"
-                    app:autoSizeMaxTextSize="@dimen/auto_size_max_text_size"
-                    app:autoSizeStepGranularity="@dimen/auto_size_step_granularity"
+                <TextView
+                    android:id="@+id/text_view_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@={customModel.description}"
+                    tools:text="[Description]"
+                    android:gravity="center"
                     app:layout_constraintTop_toTopOf="@id/constraint_guideline_center_vertical"
-                    app:layout_constraintStart_toStartOf="@id/constraint_guideline_trail_quarter_vertical"
+                    app:layout_constraintStart_toStartOf="@id/constraint_guideline_start"
                     app:layout_constraintEnd_toEndOf="@id/constraint_guideline_end"
                     app:layout_constraintBottom_toBottomOf="@id/constraint_guideline_bottom"/>
 
